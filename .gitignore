@@ -1,6 +1,7 @@
 node_modules
 .next
 app
-lib
 deploy_key
 .idea
+*history
+.history
