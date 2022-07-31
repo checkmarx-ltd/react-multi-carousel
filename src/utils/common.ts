@@ -68,7 +68,7 @@ function getTransformForCenterMode(
   ) {
     return transform;
   } else {
-    return transform + state.itemWidth / 2;
+    return ( state.currentSlide * -890 ) - ( ( ( 890 * 2 ) - state.containerWidth ) / 4 );
   }
 }
 
