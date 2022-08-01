@@ -61,15 +61,25 @@ function getTransformForCenterMode(
   props: CarouselProps,
   transformPlaceHolder?: number
 ) {
-  console.log("chedva");
+  console.log(
+    "chedva containerWidth itemWidth",
+    state.containerWidth,
+    state.itemWidth
+  );
   const transform = transformPlaceHolder || state.transform;
+  console.log(
+    "transform transformPlaceHolder state.transform",
+    transform,
+    transformPlaceHolder,
+    state.transform
+  );
   if (
     (!props.infinite && state.currentSlide === 0) ||
     notEnoughChildren(state)
   ) {
     return transform;
   } else {
-    return state.currentSlide * -890 - (890 * 2 - state.containerWidth) / 4;
+    return transform + state.itemWidth / 2;
   }
 }
 

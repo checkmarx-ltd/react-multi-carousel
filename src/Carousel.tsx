@@ -813,6 +813,7 @@ class Carousel extends React.Component<CarouselProps, CarouselInternalState> {
 
     // this lib supports showing next set of items partially as well as center mode which shows both.
     const currentTransform = getTransform(this.state, this.props);
+    console.log(additionalTransfrom, "additionalTransfrom from carousel");
     return (
       <>
         <div
